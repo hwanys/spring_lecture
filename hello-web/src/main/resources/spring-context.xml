@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+	
+	<context:component-scan base-package="kr.co.acomp.hello"/>
+	
+	<bean id="helloService" class="kr.co.acomp.hello.service.HelloService">
+		<!-- <property name="helloDAO" ref="helloDAO"/> --><!-- setter 이용 -->
+		<!-- <constructor-arg ref="helloDAO"/> 생성자 이용 -->
+		<property name="helloDAO" ref="helloDAO"></property>
+		<property name="anotherDAO" ref="anotherDAO"></property>
+	</bean>
+	
+	<bean id="helloDAO" class="kr.co.acomp.hello.dao.HelloDAO" />
+	<bean id="anotherDAO" class="kr.co.acomp.hello.dao.AnotherDAO"/>
+	
+	<!-- <bean id="bbsService" class="kr.co.acomp.hello.service.BbsService">
+		<property name="articleDAO" ref="articleDAO"></property>
+	</bean> -->
+	<bean id="articleDAO" class="kr.co.acomp.hello.dao.ArticleDAO"/>
+</beans>
