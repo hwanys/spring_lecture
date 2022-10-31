@@ -9,9 +9,9 @@
 	
 	<bean id="dataSource" class="org.springframework.jdbc.datasource.SimpleDriverDataSource">
 		<property name="driverClass" value="${db.driverClass}"></property>
-		<property name="url" value="${db.url}"></property>
-		<property name="username" value="${db.username}"></property>
-		<property name="password" value="${db.password"></property>
+		<property name="url" value="${db.url}"/>
+		<property name="username" value="${db.username}"/>
+		<property name="password" value="${db.password"/>
 	</bean>
 	
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">

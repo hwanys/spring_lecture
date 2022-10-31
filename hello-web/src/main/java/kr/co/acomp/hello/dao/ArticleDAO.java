@@ -20,7 +20,8 @@ public class ArticleDAO {
 
 	public Article selectArticleById(String articleId) {
 		
-		return sqlSession.selectOne("mappers.article-mapper.selectArticleById", articleId);
+		return sqlSession.selectOne(
+				"mappers.article-mapper.selectArticleById", articleId);
 		
 //		Article article = new Article(10, "lee", "test", "테스트입니다.");
 //		return article;

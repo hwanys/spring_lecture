@@ -4,13 +4,13 @@
 <mapper namespace="mappers.article-mapper">
 	<insert id="insertArticle"
 			parameterType="kr.co.acomp.hello.vo.Article">
-		insert into (article_id, author, title, content)
-		value (#{articleId}, #{author}, #{title}, #{content})
+		insert into article (article_id, author, title, content)
+		values (#{articleId}, #{author}, #{title}, #{content});
 	</insert>
 	<select id="selectArticleById"
 			resultType="kr.co.acomp.hello.vo.Article"
 			parameterType="string">
-		select article_id,
+		select article_id as articleId,
 				author,
 				title,
 				content

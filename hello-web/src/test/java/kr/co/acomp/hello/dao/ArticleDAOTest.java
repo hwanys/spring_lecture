@@ -21,15 +21,18 @@ public class ArticleDAOTest {
 	private ArticleDAO dao;
 
 	@Test
+	@Ignore
 	public void testInsertArticle() {
-		dao.insertArticle(null);
+		Article article = new Article(2, "lee", "test", "테스트입니다.");
+		dao.insertArticle(article);
 	}
 	
 	@Test
-	@Ignore // 테스트 케이스 배제 시키기
+//	@Ignore // 테스트 케이스 배제 시키기
 	public void testSelectArticleById() {
 		
-		Article article = dao.selectArticleById(null);
+		Article article = dao.selectArticleById("2");
+		System.out.println(article);
 		
 		Assert.assertTrue(article.getAuthor().equals("lee"));
 		
