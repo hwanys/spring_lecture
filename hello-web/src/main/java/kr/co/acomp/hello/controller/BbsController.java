@@ -24,6 +24,7 @@ public class BbsController {
 	
 	@GetMapping("")
 	public String index(){
+		bbsService.testService();
 		return "index";
 	}
 	

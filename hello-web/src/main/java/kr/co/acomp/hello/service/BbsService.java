@@ -19,4 +19,8 @@ public class BbsService {
 	public Article viewArticleDetail(String articleId) {
 		return this.articleDAO.selectArticleById(articleId);
 	}
+	
+	public void testService(){
+		System.out.println("target invoked..");
+	}
 }
