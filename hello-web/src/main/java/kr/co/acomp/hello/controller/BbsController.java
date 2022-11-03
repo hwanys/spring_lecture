@@ -24,7 +24,7 @@ public class BbsController {
 	
 	@GetMapping("")
 	public String index(){
-		bbsService.testService();
+		bbsService.registArticle(new Article(5, "kim", "test", "test"));
 		return "index";
 	}
 	
