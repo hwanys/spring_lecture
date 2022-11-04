@@ -24,7 +24,7 @@ public class BbsController {
 	
 	@GetMapping("")
 	public String index(){
-		bbsService.registArticle(new Article(5, "kim", "test", "test"));
+//		bbsService.registArticle(new Article(5, "kim", "test", "test"));
 		return "index";
 	}
 	
@@ -41,8 +41,9 @@ public class BbsController {
 	@ResponseBody
 	public Article write(@RequestBody Article article){ // json 내용 -> article 객체로 변환
 		
-		Article a = article; // article 객체를
-		return a;			// 클라이언트로 바로 response함.
+		bbsService.registArticle(article);
+//		Article a = article; // article 객체를
+		return article;			// 클라이언트로 바로 response함.
 	}
 	
 //	@GetMapping("/{articleID}") // url에 따라오는 글 번호를 처리하는..
